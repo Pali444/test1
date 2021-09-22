@@ -1,38 +1,19 @@
-      1 [main] bash 428 dofork: child -1 - forked process 5016 died unexpectedly, retry 0, exit code 0xC0000142, errno 11
-bash: fork: retry: Resource temporarily unavailable
+ КОНТРОЛЬНОЕ ЗАДАНИЕ
 
-1@1-OLDI MINGW32 ~/Desktop/git (master)
-$ git clone https://github.com/Pali444/test2.git
-Cloning into 'test2'...
-remote: Enumerating objects: 6, done.
-remote: Counting objects: 100% (6/6), done.
-remote: Compressing objects: 100% (2/2), done.
-remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
-Receiving objects: 100% (6/6), done.
-ls-la
+В предыдущей главе вы создали репозиторий на github и получили его к себе на локальную машину.
 
-1@1-OLDI MINGW32 ~/Desktop/git (master)
-$ ls-la
-bash: ls-la: command not found
-ls
+В своём репозитории создайте файл INFO.md и постарайтесь записывать туда все команды, которые вы выполняете из командой строки вместе с их кратким описанием.
+Создайте файл file-feature-1.txt с произвольным содержимым (например, текст из предыдущей главы) и зафиксируйте его в Git.
+После этого создайте файл file-feature-2.txt с другим содержимым (например, текст из этой главы). Вновь измените файл file-feature-1.txt. Снова зафиксируйте его в Git.
+Теперь создайте file-feature-3.txt (произвольный текст) и удалите file-feature-1.txt. Зафиксируйте это изменение. Обратите внимание: вы можете зафиксировать удаление файла через git add или через git delete.
+Теперь переименуйте файл file-feature-3.txt в file-main-feature.txt, используя git mv.
+Мы ожидаем, что в вашем репозитории будет четыре коммита и три файла. У каждого коммита должно быть осмысленное описание того, что вы хотели сделать.
 
-1@1-OLDI MINGW32 ~/Desktop/git (master)
-$ ls
+После того, как все изменения зафиксированы, выполните команду: 
 
-test2/
+git push origin master
+Так вы отправите все изменения на сервер.
 
-1@1-OLDI MINGW32 ~/Desktop/git (master)
-$
+Помните, что вы почти всегда можете отменить любое изменение в своём репозитории с помощью git checkout и git reset. Но если вы совершенно точно уверены, что сломали абсолютно всё, то снова склонируйте репозиторий.
 
-1@1-OLDI MINGW32 ~/Desktop/git (master)
-$ cd test2/
-
-1@1-OLDI MINGW32 ~/Desktop/git/test2 (main)
-$ ls
-README.md
-
-1@1-OLDI MINGW32 ~/Desktop/git/test2 (main)
-$ cat readme.md
-# test2
-
-репозиторий test 2
+Если вам необходима консультация, вы всегда можете обратиться к ментору с вопросом.
